@@ -1,0 +1,58 @@
+Used Hibernate to handle the database and create the tables 
+description is also available in application.properties
+User table
++----------+--------------+------+-----+---------+-------+
+| Field    | Type         | Null | Key | Default | Extra |
++----------+--------------+------+-----+---------+-------+
+| emailid  | varchar(255) | NO   | PRI | NULL    |       |
+| password | varchar(255) | YES  |     | NULL    |       |
++----------+--------------+------+-----+---------+-------+
+
+admin table
+
++----------+--------------+------+-----+---------+-------+
+| Field    | Type         | Null | Key | Default | Extra |
++----------+--------------+------+-----+---------+-------+
+| emailid  | varchar(255) | NO   | PRI | NULL    |       |
+| password | varchar(255) | YES  |     | NULL    |       |
++----------+--------------+------+-----+---------+-------+
+
+answer table
+
++--------+--------------+------+-----+---------+----------------+
+| Field  | Type         | Null | Key | Default | Extra          |
++--------+--------------+------+-----+---------+----------------+
+| ansid  | bigint(20)   | NO   | PRI | NULL    | auto_increment |
+| answer | varchar(255) | YES  |     | NULL    |                |
++--------+--------------+------+-----+---------+----------------+
+Policy table
+
++------------+--------------+------+-----+---------+-------+
+| Field      | Type         | Null | Key | Default | Extra |
++------------+--------------+------+-----+---------+-------+
+| policyid   | int(11)      | NO   | PRI | NULL    |       |
+| amount     | double       | NO   |     | NULL    |       |
+| category   | varchar(255) | YES  |     | NULL    |       |
+| features   | varchar(255) | YES  |     | NULL    |       |
+| policyname | varchar(255) | YES  |     | NULL    |       |
++------------+--------------+------+-----+---------+-------+
+User Policy table 
+
++-------------+--------------+------+-----+---------+-------+
+| Field       | Type         | Null | Key | Default | Extra |
++-------------+--------------+------+-----+---------+-------+
+| userid      | int(11)      | NO   | PRI | NULL    |       |
+| applieddate | varchar(255) | YES  |     | NULL    |       |
+| name        | varchar(255) | YES  |     | NULL    |       |
+| policyname  | varchar(255) | YES  |     | NULL    |       |
+| status      | varchar(255) | YES  |     | NULL    |       |
++-------------+--------------+------+-----+---------+-------+
+
+Question table
++----------+--------------+------+-----+---------+----------------+
+| Field    | Type         | Null | Key | Default | Extra          |
++----------+--------------+------+-----+---------+----------------+
+| cid      | bigint(20)   | NO   | PRI | NULL    | auto_increment |
+| question | varchar(255) | YES  |     | NULL    |                |
+| ans      | varchar(255) | YES  |     | NULL    |                |
++----------+--------------+------+-----+---------+----------------+
